@@ -1,100 +1,73 @@
 import React, { Component } from 'react'
+import './Map.css';
 
 const runUpNets = {
-  backgroundColor: 'pink',
-  height: '130px',
-  width: '40px',
-  margin: '2%'
-}
-
-const revoSports = {
-  display: 'flex',
-  justifyContent: 'center',
-  justifyItems: 'center',
-  padding: '10%',
-}
-
-const bowlingMachineBox = {
-  backgroundColor: 'black',
-  height: '130px',
-  width: '140px',
-  color: 'white'
-}
-
-const bowlingMachineBox1 = {
-  backgroundColor: 'pink',
-  height: '130px',
-  width: '100px',
-  margin: '2px',
-}
-
-const bowlingMachine = {
-  backgroundColor: 'red',
-  color: 'pink',
-  height: '120px',
-  width: '40px',
-  margin: '2%'
-}
-
-const dodgeBall = {
-  backgroundColor: 'red',
-  height: '100px',
-  width: '200px',
-  margin: '2%',
 }
 
 class Map extends Component {
+  constructor(props) {
+    super(props);
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.MouseLeft = this.MouseLeft.bind(this);
+  }
+
+  handleMouseEnter = () => <h1> Mouse Entered </h1>
+  MouseLeft = () => <div> <h1>Hello World...</h1> </div>
+
   render() {
     return (
-      <>
-        <div style={revoSports}>
+      <div style={{ boxShadow: '0 0 0 1px rgba(0,0,0,.05),0 2px 3px 0 rgba(0,0,0,.1);' }}>
+        <div className='revoSports'>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={bowlingMachineBox}> box_1 </div>
+              <div className='bowlingMachineBox'
+                onMouseEnter={this.handleMouseEnter}
+                onMouseLeave={this.MouseLeft}
+              > box_1 </div>
               <div style={{ display: 'flex' }}>
-                <div style={runUpNets}>
-                  run up
+                <div className='runUpNets'>
+                  run up nets
                 </div>
-                <div style={runUpNets}>
-                  run up
+                <div className='runUpNets'>
+                  run up nets
                 </div>
-                <div style={runUpNets}>
-                  run up
+                <div className='runUpNets'>
+                  run up nets
                 </div>
               </div>
 
               <div style={{ display: 'flex' }}>
-                <div style={bowlingMachine}>
-                  mac hine
+                <div className="bowlingMachine">
+                  bowling machine
                 </div>
-                <div style={bowlingMachine}>
-                  mac hine
+                <div className="bowlingMachine">
+                  bowling machine
                 </div>
-                <div style={bowlingMachine}>
-                  mac hine
+                <div className="bowlingMachine">
+                  bowling machine
                 </div>
               </div>
 
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex" }}>
-                <div style={bowlingMachineBox1}>
+                <div className="bowlingMachineBox1">
                   Box_2
               </div>
-                <div style={bowlingMachineBox1}>
+                <div className="bowlingMachineBox1">
                   Box_2
               </div>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <div style={dodgeBall}> floorBall_2 </div>
-                <div style={dodgeBall}> floorBall_1 </div>
+                <div className='dodgeBall'> floorBall_2 </div>
+                <div className='dodgeBall'> floorBall_1 </div>
               </div>
             </div>
 
           </div>
         </div>
-      </>
+      </div>
     )
   }
 }
