@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 
 import './BookingForm.css';
@@ -53,6 +53,7 @@ class BookingForm extends Component {
           <Form.Group as={Col} md={2}>
             <Form.Control  
               required
+              placeholder="start"
               type="time"
               name="time"
             />
@@ -66,6 +67,15 @@ class BookingForm extends Component {
             name="phoneNumber"
             placeholder="Phone Number"
             />
+            </Form.Group>
+
+            <Form.Group as={Col} md={2}>
+              <Button 
+                variant="outline-primary light" 
+                type="submit"
+                >
+                Submit
+              </Button>
             </Form.Group>
           </Form.Row>
         </Form>

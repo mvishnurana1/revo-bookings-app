@@ -3,12 +3,12 @@ import Map from './Components/Map/Map';
 import BookingForm from './Components/BookingForm/BookingForm';
 
 function App() {
-  return (
+  return <div>
+    <Map/>
     <div>
-      <Map />
-      {/* <BookingForm /> */}
+      <BookingForm/>
     </div>
-  );
+  </div>
 }
 
 export default App;

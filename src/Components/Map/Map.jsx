@@ -25,7 +25,7 @@ class Map extends Component {
                 <div className='runUpNets'>
                   run up nets
                 </div>
-                <div className='runUpNets'>
+                <div className='runUpNets' onClick={()=> console.log('clicked...runUpNets')}>
                   run up nets
                 </div>
                 <div className='runUpNets'>
