@@ -1,51 +1,57 @@
 .revoSports {
+  padding: 10%;
+  cursor: pointer;
+}
+
+.boundary {
   display: flex;
-  justify-content: center; 
-  justify-items: center; 
-  padding-top: calc(200px - 5%); 
-  margin: auto; 
-  /*backgroundColor: sgrey; */
-  padding: 5%; 
-  /* position: fixed; */ 
+  justify-content: center;
+  align-items: center;
+}
+
+.revoSports>* {
+  /*flex-basis: 100%; */
+  align-self: center;
+  flex-grow: 1;
 }
 
 .runUpNets {
-  background-color: pink; 
-  height: 130px; 
-  width: 60px; 
-  margin: 2%; 
-  text-align: center; 
-  writing-mode: vertical-rl; 
+  background-color: pink;
+  height: 130px;
+  width: 60px;
+  margin: 2%;
+  text-align: center;
+  writing-mode: vertical-rl;
 }
 
 .bowlingMachineBox {
-  background-color: black; 
-  height: 130px; 
-  width: 175px; 
-  color: white; 
+  background-color: black;
+  height: 130px;
+  width: 175px;
+  color: white;
 }
 
 .bowlingMachineBox1 {
-  background-color: pink; 
-  height: 130px; 
-  width: 100px; 
-  margin: 2px; 
+  background-color: pink;
+  height: 130px;
+  width: 100px;
+  margin: 2px;
 }
 
 .bowlingMachine {
-  background-color: red; 
-  color: pink; 
-  height: 120px; 
-  width: 60px; 
-  margin: 2%; 
-  text-align: center; 
-  writing-mode: vertical-rl;  
+  background-color: red;
+  color: pink;
+  height: 120px;
+  width: 60px;
+  margin: 2%;
+  text-align: center;
+  writing-mode: vertical-rl;
 }
 
 .dodgeBall {
-  background-color: red; 
-  height: 100px; 
-  width: 200px; 
-  margin: 2%; 
-  writing-mode: vertical-rl; 
+  background-color: red;
+  height: 100px;
+  width: 200px;
+  margin: 2%;
+  writing-mode: vertical-rl;
 }

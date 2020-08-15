@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import './Map.css';
 
-const runUpNets = {
-}
-
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +13,7 @@ class Map extends Component {
 
   render() {
     return (
-      <div style={{ boxShadow: '0 0 0 1px rgba(0,0,0,.05),0 2px 3px 0 rgba(0,0,0,.1);' }}>
+      <div className="boundary">
         <div className='revoSports'>
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <div style={{ display: 'flex', flexDirection: 'column' }}>
@@ -64,7 +61,6 @@ class Map extends Component {
                 <div className='dodgeBall'> floorBall_1 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
