@@ -55,7 +55,7 @@ class BookingForm extends Component {
               required
               placeholder="start"
               type="time"
-              name="time"
+              name="starttime"
             />
           </Form.Group>
           </Form.Row>
@@ -63,12 +63,23 @@ class BookingForm extends Component {
           <Form.Row>
             <Form.Group as={Col} md={2}>
             <Form.Control
-            required
-            name="phoneNumber"
-            placeholder="Phone Number"
+              required
+              name="phoneNumber"
+              placeholder="Phone Number"
             />
             </Form.Group>
 
+            <Form.Group as={Col} md={2}>
+            <Form.Control  
+              required
+              placeholder="start"
+              type="time"
+              name="endtime"
+            />
+          </Form.Group>
+          </Form.Row>
+
+          <Form.Row>
             <Form.Group as={Col} md={2}>
               <Button 
                 variant="outline-primary light" 
