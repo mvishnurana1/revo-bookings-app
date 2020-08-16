@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 import './Map.css';
 
+import RunNets from '../../assets/run-up-nets.png';
+import CoachPng from '../../assets/coaches-box.png';  
+import BowlingMachine from '../../assets/bowling-machine.png'; 
+import FloorBall from '../../assets/Floorball_pictogram.svg'; 
+
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -20,45 +25,61 @@ class Map extends Component {
               <div className='bowlingMachineBox'
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.MouseLeft}
-              > box_1 </div>
+              > 
+                <img style={{width:'50px', height:'50px'}} src={CoachPng} alt="" />
+              </div>
               <div style={{ display: 'flex' }}>
                 <div className='runUpNets'>
-                  run up nets
+                  <img style={{display: 'flex', alignItems:'center', width:'50px', height:'30px'}} src={RunNets} alt="" />
+                  <div className="pitch"></div>
                 </div>
                 <div className='runUpNets' onClick={()=> console.log('clicked...runUpNets')}>
-                  run up nets
+                  <img style={{display: 'flex', alignItems:'center', width:'50px', height:'30px'}} src={RunNets} alt="" />
+                  <div className="pitch"></div>
                 </div>
                 <div className='runUpNets'>
-                  run up nets
+                  <img style={{display: 'flex', alignItems:'center', width:'50px', height:'30px'}} src={RunNets} alt="" />
+                  <div className="pitch"></div>
                 </div>
               </div>
 
               <div style={{ display: 'flex' }}>
                 <div className="bowlingMachine">
-                  bowling machine
+                  <img style={{display: 'flex', alignItems:'center', width:'30px', height:'30px'}} src={BowlingMachine} alt="" />
+                  <div className="pitch"></div>
                 </div>
                 <div className="bowlingMachine">
-                  bowling machine
+                  <img style={{display: 'flex', alignItems:'center', width:'30px', height:'30px'}} src={BowlingMachine} alt="" />
+                  <div className="pitch"></div>
                 </div>
                 <div className="bowlingMachine">
-                  bowling machine
+                  <img style={{display: 'flex', align:'center', width:'30px', height:'30px'}} src={BowlingMachine} alt="" />
+                  <div className="pitch"></div>
                 </div>
               </div>
 
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex" }}>
-                <div className="bowlingMachineBox1">
-                  Box_2
+                <div className="CoachesBox1">
+                  <img style={{width:'50px', height:'50px'}} src={CoachPng} alt="" />
               </div>
-                <div className="bowlingMachineBox1">
-                  Box_2
-              </div>
+                <div className="CoachesBox1">
+                  <img style={{width:'50px', height:'50px'}} src={CoachPng} alt="" />
+                </div>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <div className='dodgeBall'> floorBall_2 </div>
-                <div className='dodgeBall'> floorBall_1 </div>
+                <div 
+                  className='floorBall' 
+                  onMouseEnter={() => console.log('MouseEntered...')}
+                  onMouseLeave={() => console.log('Mouse Just left')}
+                > 
+                  <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                </div>
+                <div className='floorBall'> 
+                  <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                </div>
               </div>
             </div>
           </div>

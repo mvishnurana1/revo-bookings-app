@@ -1,6 +1,8 @@
 .revoSports {
-  padding: 10%;
+  padding: 2%;
   cursor: pointer;
+  border: 1px solid black; 
+  margin-top: 3%; 
 }
 
 .boundary {
@@ -9,49 +11,67 @@
   align-items: center;
 }
 
-.revoSports>* {
-  /*flex-basis: 100%; */
+.revoSports >* {
   align-self: center;
   flex-grow: 1;
 }
 
 .runUpNets {
-  background-color: pink;
+  border: 1px solid black; 
+  display: flex;
+  align-content: center;
   height: 130px;
   width: 60px;
-  margin: 2%;
-  text-align: center;
+  align-items: center;
   writing-mode: vertical-rl;
+}
+
+.pitch {
+  width: 25px; 
+  height: 80px; 
+  background-color: green;
 }
 
 .bowlingMachineBox {
-  background-color: black;
   height: 130px;
-  width: 175px;
-  color: white;
+  width: 180px;
+  border:1px solid black; 
 }
 
-.bowlingMachineBox1 {
-  background-color: pink;
+.CoachesBox1 {
+  border: 1px solid black; 
+  display: flex;
+  align-content: center;
   height: 130px;
   width: 100px;
-  margin: 2px;
 }
 
 .bowlingMachine {
-  background-color: red;
+  align-content: center;
+  border: 1px solid black; 
   color: pink;
-  height: 120px;
+  display: flex;
+  height: 130px;
   width: 60px;
-  margin: 2%;
-  text-align: center;
+  align-items: center;
   writing-mode: vertical-rl;
 }
 
-.dodgeBall {
-  background-color: red;
-  height: 100px;
+.floorBall {
+  border: 1px solid black; 
+  height: 130px;
   width: 200px;
-  margin: 2%;
   writing-mode: vertical-rl;
+}
+
+.imgStyles {
+  display: flex;
+  align-content: center;
+  width: 50px; 
+  height: 50px; 
+}
+
+.imgStyling {
+  width: 50px; 
+  height: 50px; 
 }
