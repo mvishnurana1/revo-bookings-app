@@ -1,14 +1,75 @@
-.revoSports {
-  padding: 2%;
-  cursor: pointer;
-  border: 1px solid black; 
-  margin-top: 3%; 
-}
-
 .boundary {
+  align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.bowlingMachine {
   align-items: center;
+  border: 1px solid black; 
+  color: pink;
+  display: flex;
+  height: 130px;
+  width: 60px;
+  writing-mode: vertical-rl;
+}
+
+.bowlingMachineBox {
+  align-items: center;
+  border:1px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  width: 180px;
+}
+
+.court {
+  background-color: brown;
+  height: 90px; 
+  width: 150px;
+}
+
+.CoachesBox1 {
+  align-items: center;
+  border: 1px solid black; 
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  width: 100px;
+}
+
+.floorBall {
+  align-items: center;
+  border: 1px solid black; 
+  display: flex; 
+  height: 130px;
+  width: 200px;
+  writing-mode: vertical-rl;
+}
+
+.imgStyles {
+  align-content: center;
+  display: flex;
+  height: 50px; 
+  width: 50px; 
+}
+
+.imgStyling {
+  width: 50px; 
+  height: 50px; 
+}
+
+.pitch {
+  background-color: green;
+  width: 25px; 
+  height: 80px; 
+}
+
+.revoSports {
+  border: 1px solid black; 
+  cursor: pointer;
+  margin-top: 3%; 
+  padding: 2%;
 }
 
 .revoSports >* {
@@ -17,61 +78,11 @@
 }
 
 .runUpNets {
-  border: 1px solid black; 
-  display: flex;
   align-content: center;
-  height: 130px;
-  width: 60px;
   align-items: center;
-  writing-mode: vertical-rl;
-}
-
-.pitch {
-  width: 25px; 
-  height: 80px; 
-  background-color: green;
-}
-
-.bowlingMachineBox {
-  height: 130px;
-  width: 180px;
-  border:1px solid black; 
-}
-
-.CoachesBox1 {
   border: 1px solid black; 
-  display: flex;
-  align-content: center;
-  height: 130px;
-  width: 100px;
-}
-
-.bowlingMachine {
-  align-content: center;
-  border: 1px solid black; 
-  color: pink;
   display: flex;
   height: 130px;
   width: 60px;
-  align-items: center;
   writing-mode: vertical-rl;
-}
-
-.floorBall {
-  border: 1px solid black; 
-  height: 130px;
-  width: 200px;
-  writing-mode: vertical-rl;
-}
-
-.imgStyles {
-  display: flex;
-  align-content: center;
-  width: 50px; 
-  height: 50px; 
-}
-
-.imgStyling {
-  width: 50px; 
-  height: 50px; 
 }

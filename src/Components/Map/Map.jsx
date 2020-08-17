@@ -26,7 +26,14 @@ class Map extends Component {
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.MouseLeft}
               > 
-                <img style={{width:'50px', height:'50px'}} src={CoachPng} alt="" />
+                <div>
+                  <img style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                </div>
+                <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between', marginTop:'-1rem'}}>
+                  <div style={{margin:'1rem'}} className="pitch"></div>
+                  <div style={{margin:'1rem'}} className="pitch"></div>
+                  <div style={{margin:'1rem'}} className="pitch"></div>
+                </div>
               </div>
               <div style={{ display: 'flex' }}>
                 <div className='runUpNets'>
@@ -62,10 +69,14 @@ class Map extends Component {
             <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ display: "flex" }}>
                 <div className="CoachesBox1">
-                  <img style={{width:'50px', height:'50px'}} src={CoachPng} alt="" />
+                  <div>
+                    <img style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                  </div>
+                  <div className="pitch"></div>
               </div>
                 <div className="CoachesBox1">
-                  <img style={{width:'50px', height:'50px'}} src={CoachPng} alt="" />
+                  <img style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                  <div className="pitch"></div>
                 </div>
               </div>
 
@@ -75,10 +86,18 @@ class Map extends Component {
                   onMouseEnter={() => console.log('MouseEntered...')}
                   onMouseLeave={() => console.log('Mouse Just left')}
                 > 
-                  <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                  <div>
+                    <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                  </div>
+                  <div className="court"></div>
                 </div>
                 <div className='floorBall'> 
-                  <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                  <div>
+                    <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                  </div>
+                  <div>
+                    <div className="court"></div>
+                  </div>
                 </div>
               </div>
             </div>
