@@ -9,7 +9,6 @@ import FloorBall from '../../assets/Floorball_pictogram.svg';
 class Map extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.MouseLeft = this.MouseLeft.bind(this);
   }
 
@@ -40,7 +39,7 @@ class Map extends Component {
                   <img className='pitchBorders' src={RunNets} alt="" />
                   <div className="pitch"></div>
                 </div>
-                <div className='runUpNets' onClick={()=> console.log('clicked...runUpNets')}>
+                <div className='runUpNets' onClick={()=> this.MouseLeft}>
                   <img className='pitchBorders' src={RunNets} alt="" />
                   <div className="pitch"></div>
                 </div>
