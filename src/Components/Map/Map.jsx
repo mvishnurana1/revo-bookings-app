@@ -20,8 +20,8 @@ class Map extends Component {
     return (
       <div className="boundary">
         <div className='revoSports'>
-          <div style={{ display: 'flex', flexDirection: 'row' }}>
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className='rowStyle'>
+            <div className='columnStyle'>
               <div className='bowlingMachineBox'
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.MouseLeft}
@@ -29,7 +29,7 @@ class Map extends Component {
                 <div>
                   <img style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
                 </div>
-                <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between', marginTop:'-1rem'}}>
+                <div className='triplePitch'>
                   <div style={{margin:'1rem'}} className="pitch"></div>
                   <div style={{margin:'1rem'}} className="pitch"></div>
                   <div style={{margin:'1rem'}} className="pitch"></div>
@@ -37,36 +37,36 @@ class Map extends Component {
               </div>
               <div style={{ display: 'flex' }}>
                 <div className='runUpNets'>
-                  <img style={{display: 'flex', alignItems:'center', width:'50px', height:'30px'}} src={RunNets} alt="" />
+                  <img className='pitchBorders' src={RunNets} alt="" />
                   <div className="pitch"></div>
                 </div>
                 <div className='runUpNets' onClick={()=> console.log('clicked...runUpNets')}>
-                  <img style={{display: 'flex', alignItems:'center', width:'50px', height:'30px'}} src={RunNets} alt="" />
+                  <img className='pitchBorders' src={RunNets} alt="" />
                   <div className="pitch"></div>
                 </div>
                 <div className='runUpNets'>
-                  <img style={{display: 'flex', alignItems:'center', width:'50px', height:'30px'}} src={RunNets} alt="" />
+                  <img className='pitchBorders' src={RunNets} alt="" />
                   <div className="pitch"></div>
                 </div>
               </div>
 
-              <div style={{ display: 'flex' }}>
+              <div className='rowStyle'>
                 <div className="bowlingMachine">
-                  <img style={{display: 'flex', alignItems:'center', width:'30px', height:'30px'}} src={BowlingMachine} alt="" />
+                  <img className='bowlingMachineBorder' src={BowlingMachine} alt="" />
                   <div className="pitch"></div>
                 </div>
                 <div className="bowlingMachine">
-                  <img style={{display: 'flex', alignItems:'center', width:'30px', height:'30px'}} src={BowlingMachine} alt="" />
+                  <img className='bowlingMachineBorder' src={BowlingMachine} alt="" />
                   <div className="pitch"></div>
                 </div>
                 <div className="bowlingMachine">
-                  <img style={{display: 'flex', align:'center', width:'30px', height:'30px'}} src={BowlingMachine} alt="" />
+                  <img className='bowlingMachineBorder' src={BowlingMachine} alt="" />
                   <div className="pitch"></div>
                 </div>
               </div>
 
             </div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div className='columnStyle'>
               <div style={{ display: "flex" }}>
                 <div className="CoachesBox1">
                   <div>
@@ -80,7 +80,7 @@ class Map extends Component {
                 </div>
               </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <div className='columnStyle'>
                 <div 
                   className='floorBall' 
                   onMouseEnter={() => console.log('MouseEntered...')}
