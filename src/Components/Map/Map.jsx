@@ -9,93 +9,92 @@ import FloorBall from '../../assets/Floorball_pictogram.svg';
 class Map extends Component {
   constructor(props) {
     super(props);
-    this.MouseLeft = this.MouseLeft.bind(this);
+    this.state = {
+      selectedArea: ''
+    }
+    this.handleClick=this.handleClick.bind(this);
   }
 
-  handleMouseEnter = () => <h1> Mouse Entered </h1>
-  MouseLeft = () => <div> <h1>Hello World...</h1> </div>
+  handleClick(e){
+    this.setState({selectedArea : e.target.id}, 
+      () => console.log(this.state.selectedArea)); 
+  }
 
   render() {
     return (
       <div className="boundary">
         <div className='revoSports'>
-          <div className='rowStyle'>
+          <div className='rowStyle'> 
             <div className='columnStyle'>
-              <div className='bowlingMachineBox'
-                onMouseEnter={this.handleMouseEnter}
-                onMouseLeave={this.MouseLeft}
+              <div className='bowlingMachineBox' id='coaches_box' onClick={this.handleClick}
               > 
                 <div>
-                  <img style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                  <img  id='coaches_box'style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
                 </div>
-                <div className='triplePitch'>
-                  <div style={{margin:'1rem'}} className="pitch"></div>
-                  <div style={{margin:'1rem'}} className="pitch"></div>
-                  <div style={{margin:'1rem'}} className="pitch"></div>
+                <div  id='coaches_box' className='triplePitch'>
+                  <div id='coaches_box' style={{margin:'1rem'}} className="pitch"></div>
+                  <div id='coaches_box' style={{margin:'1rem'}} className="pitch"></div>
+                  <div id='coaches_box' style={{margin:'1rem'}} className="pitch"></div>
                 </div>
               </div>
               <div style={{ display: 'flex' }}>
-                <div className='runUpNets'>
-                  <img className='pitchBorders' src={RunNets} alt="" />
-                  <div className="pitch"></div>
+                <div id='runUpNets_1' onClick={this.handleClick} className='runUpNets'>
+                  <img id='runUpNets_1' className='pitchBorders' src={RunNets} alt="" />
+                  <div id='runUpNets_1' className="pitch"></div>
                 </div>
-                <div className='runUpNets' onClick={()=> this.MouseLeft}>
-                  <img className='pitchBorders' src={RunNets} alt="" />
-                  <div className="pitch"></div>
+                <div id='runUpNets_2' onClick={this.handleClick} className='runUpNets'>
+                  <img id='runUpNets_2' className='pitchBorders' src={RunNets} alt="" />
+                  <div id='runUpNets_2' className="pitch"></div>
                 </div>
-                <div className='runUpNets'>
-                  <img className='pitchBorders' src={RunNets} alt="" />
-                  <div className="pitch"></div>
+                <div id='runUpNets_3' onClick={this.handleClick} className='runUpNets'>
+                  <img id='runUpNets_3' className='pitchBorders' src={RunNets} alt="" />
+                  <div id='runUpNets_3' className="pitch"></div>
                 </div>
               </div>
 
               <div className='rowStyle'>
-                <div className="bowlingMachine">
-                  <img className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div className="pitch"></div>
+                <div id='bowlingMachine_1' onClick={this.handleClick} className="bowlingMachine">
+                  <img id='bowlingMachine_1' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
+                  <div id='bowlingMachine_1' className="pitch"></div>
                 </div>
-                <div className="bowlingMachine">
-                  <img className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div className="pitch"></div>
+                <div id='bowlingMachine_2' onClick={this.handleClick} className="bowlingMachine">
+                  <img id='bowlingMachine_2' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
+                  <div id='bowlingMachine_2' className="pitch"></div>
                 </div>
-                <div className="bowlingMachine">
-                  <img className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div className="pitch"></div>
+                <div id='bowlingMachine_3' onClick={this.handleClick} className="bowlingMachine">
+                  <img id='bowlingMachine_3' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
+                  <div id='bowlingMachine_3' className="pitch"></div>
                 </div>
               </div>
 
             </div>
             <div className='columnStyle'>
               <div style={{ display: "flex" }}>
-                <div className="CoachesBox1">
-                  <div>
-                    <img style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                <div id='CoachesBox_2' onClick={this.handleClick} className="CoachesBox1">
+                  <div id='CoachesBox_2' >
+                    <img id='CoachesBox_2'  style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
                   </div>
-                  <div className="pitch"></div>
+                  <div id='CoachesBox_2'  className="pitch"></div>
               </div>
-                <div className="CoachesBox1">
-                  <img style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
-                  <div className="pitch"></div>
+                <div id='CoachesBox_3' onClick={this.handleClick} className="CoachesBox1">
+                  <img id='CoachesBox_3' style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                  <div id='CoachesBox_3' className="pitch"></div>
                 </div>
               </div>
 
               <div className='columnStyle'>
-                <div 
-                  className='floorBall' 
-                  onMouseEnter={() => console.log('MouseEntered...')}
-                  onMouseLeave={() => console.log('Mouse Just left')}
-                > 
-                  <div>
-                    <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                <div id='floorBall_1' onClick={this.handleClick} className='floorBall'> 
+                  <div id='floorBall_1'>
+                    <img id='floorBall_1' style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
                   </div>
-                  <div className="court"></div>
+                  <div id='floorBall_1' className="court"></div>
                 </div>
-                <div className='floorBall'> 
-                  <div>
-                    <img style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                <div id='floorBall_2' onClick={this.handleClick} className='floorBall'> 
+                  <div id='floorBall_2'>
+                    <img id='floorBall_2' style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
                   </div>
-                  <div>
-                    <div className="court"></div>
+                  <div id='floorBall_2'>
+                    <div id='floorBall_2' className="court"></div>
                   </div>
                 </div>
               </div>
