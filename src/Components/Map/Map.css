@@ -1,7 +1,7 @@
 .boundary {
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .bowlingMachine {
@@ -9,9 +9,9 @@
   border: 1px solid black; 
   color: pink;
   display: flex;
-  height: 130px;
-  width: 60px;
-  writing-mode: vertical-rl;
+  height: 13rem;
+  width: 6rem;
+  flex-direction: column;
 }
 
 .bowlingMachineBox {
@@ -19,15 +19,15 @@
   border:1px solid black;
   display: flex;
   flex-direction: column;
-  height: 130px;
-  width: 180px;
+  height: 13rem;
+  width: 18rem;
 }
 
 .bowlingMachineBorder {
   align-items: center;
   display: flex; 
-  height: 30px;
-  width: 30px; 
+  height: 3rem;
+  width: 3rem; 
 }
 
 .columnStyle {
@@ -37,8 +37,8 @@
 
 .court {
   background-color: brown;
-  height: 90px; 
-  width: 150px;
+  height: 9rem; 
+  width: 15rem;
 }
 
 .CoachesBox1 {
@@ -46,54 +46,49 @@
   border: 1px solid black; 
   display: flex;
   flex-direction: column;
-  height: 130px;
-  width: 100px;
+  height: 13rem;
+  width: 10rem;
 }
 
 .floorBall {
   align-items: center;
   border: 1px solid black; 
   display: flex; 
-  height: 130px;
-  width: 200px;
-  writing-mode: vertical-rl;
+  height: 13rem;
+  width: 20rem;
+  flex-direction: column;
 }
 
 .imgStyles {
   align-content: center;
   display: flex;
-  height: 50px; 
-  width: 50px; 
+  height: 5rem; 
+  width: 5rem; 
 }
 
 .imgStyling {
-  width: 50px; 
-  height: 50px; 
+  width: 5rem; 
+  height: 5rem; 
 }
 
 .pitch {
   background-color: green;
-  width: 25px; 
-  height: 80px; 
+  width: 2rem; 
+  height: 6rem; 
 }
 
 .pitchBorders {
   align-items: center;
   display: flex;  
-  height: 30px;
-  width: 50px; 
+  height: 3rem;
+  width: 5rem; 
 }
 
 .revoSports {
   border: 1px solid black; 
   cursor: pointer;
-  margin-top: 3%; 
-  padding: 2%;
-}
-
-.revoSports >* {
-  align-self: center;
-  flex-grow: 1;
+  margin: 3rem;   
+  padding: 3rem;
 }
 
 .rowStyle {
@@ -106,14 +101,19 @@
   align-items: center;
   border: 1px solid black; 
   display: flex;
-  height: 130px;
-  width: 60px;
-  writing-mode: vertical-rl;
+  height: 13rem;
+  width: 6rem;
+  flex-direction: column;
 }
 
 .triplePitch {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: -1rem;
+  margin-bottom: 1rem;
+  padding-bottom: .5rem;
+}
+
+.triplet {
+  margin: 1rem; 
 }
