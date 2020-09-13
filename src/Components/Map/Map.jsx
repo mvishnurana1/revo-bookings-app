@@ -16,8 +16,8 @@ class Map extends Component {
   }
 
   handleClick(e){
-    this.setState({selectedArea : e.target.id}, 
-      () => console.log(this.state.selectedArea)); 
+    this.setState({selectedArea : e.target.id}); 
+    console.log(this.state.selectedArea); 
   }
 
   render() {
@@ -26,28 +26,27 @@ class Map extends Component {
         <div className='revoSports'>
           <div className='rowStyle'> 
             <div className='columnStyle'>
-              <div className='bowlingMachineBox' id='coaches_box' onClick={this.handleClick}
-              > 
+              <div className='bowlingMachineBox' id='coaches_box' onClick={this.handleClick}> 
                 <div>
-                  <img  id='coaches_box'style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                  <img  id='coaches_box'style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
                 </div>
                 <div  id='coaches_box' className='triplePitch'>
-                  <div id='coaches_box' style={{margin:'1rem'}} className="pitch"></div>
-                  <div id='coaches_box' style={{margin:'1rem'}} className="pitch"></div>
-                  <div id='coaches_box' style={{margin:'1rem'}} className="pitch"></div>
+                  <div id='coaches_box' className="pitch triplet" />
+                  <div id='coaches_box' className="pitch triplet" />
+                  <div id='coaches_box' className="pitch triplet" />
                 </div>
               </div>
               <div style={{ display: 'flex' }}>
                 <div id='runUpNets_1' onClick={this.handleClick} className='runUpNets'>
-                  <img id='runUpNets_1' className='pitchBorders' src={RunNets} alt="" />
+                  <img id='runUpNets_1' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'3rem'}} alt="" />
                   <div id='runUpNets_1' className="pitch"></div>
                 </div>
                 <div id='runUpNets_2' onClick={this.handleClick} className='runUpNets'>
-                  <img id='runUpNets_2' className='pitchBorders' src={RunNets} alt="" />
+                  <img id='runUpNets_2' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'3rem'}} alt="" />
                   <div id='runUpNets_2' className="pitch"></div>
                 </div>
                 <div id='runUpNets_3' onClick={this.handleClick} className='runUpNets'>
-                  <img id='runUpNets_3' className='pitchBorders' src={RunNets} alt="" />
+                  <img id='runUpNets_3' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'3rem'}} alt="" />
                   <div id='runUpNets_3' className="pitch"></div>
                 </div>
               </div>
@@ -72,12 +71,12 @@ class Map extends Component {
               <div style={{ display: "flex" }}>
                 <div id='CoachesBox_2' onClick={this.handleClick} className="CoachesBox1">
                   <div id='CoachesBox_2' >
-                    <img id='CoachesBox_2'  style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                    <img id='CoachesBox_2'  style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
                   </div>
                   <div id='CoachesBox_2'  className="pitch"></div>
               </div>
                 <div id='CoachesBox_3' onClick={this.handleClick} className="CoachesBox1">
-                  <img id='CoachesBox_3' style={{width:'30px', height:'30px'}} src={CoachPng} alt="" />
+                  <img id='CoachesBox_3' style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
                   <div id='CoachesBox_3' className="pitch"></div>
                 </div>
               </div>
@@ -85,13 +84,13 @@ class Map extends Component {
               <div className='columnStyle'>
                 <div id='floorBall_1' onClick={this.handleClick} className='floorBall'> 
                   <div id='floorBall_1'>
-                    <img id='floorBall_1' style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                    <img id='floorBall_1' style={{width:'5rem', height:'3rem'}} src={FloorBall} alt="" />
                   </div>
                   <div id='floorBall_1' className="court"></div>
                 </div>
                 <div id='floorBall_2' onClick={this.handleClick} className='floorBall'> 
                   <div id='floorBall_2'>
-                    <img id='floorBall_2' style={{width:'50px', height:'30px'}} src={FloorBall} alt="" />
+                    <img id='floorBall_2' style={{width:'5rem', height:'3rem'}} src={FloorBall} alt="" />
                   </div>
                   <div id='floorBall_2'>
                     <div id='floorBall_2' className="court"></div>
