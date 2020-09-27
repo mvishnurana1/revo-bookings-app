@@ -38,16 +38,16 @@ class Map extends Component {
               </div>
               <div style={{ display: 'flex' }}>
                 <div id='runUpNets_1' onClick={this.handleClick} className='runUpNets'>
-                  <img id='runUpNets_1' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'3rem'}} alt="" />
-                  <div id='runUpNets_1' className="pitch"></div>
+                  <img id='runUpNets_1' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'2rem'}} alt="" />
+                  <div id='runUpNets_1' className="pitch" />
                 </div>
                 <div id='runUpNets_2' onClick={this.handleClick} className='runUpNets'>
-                  <img id='runUpNets_2' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'3rem'}} alt="" />
-                  <div id='runUpNets_2' className="pitch"></div>
+                  <img id='runUpNets_2' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'2rem'}} alt="" />
+                  <div id='runUpNets_2' className="pitch" />
                 </div>
                 <div id='runUpNets_3' onClick={this.handleClick} className='runUpNets'>
-                  <img id='runUpNets_3' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'3rem'}} alt="" />
-                  <div id='runUpNets_3' className="pitch"></div>
+                  <img id='runUpNets_3' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'2rem'}} alt="" />
+                  <div id='runUpNets_3' className="pitch" />
                 </div>
               </div>
 
