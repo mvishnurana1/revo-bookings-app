@@ -1,5 +1,4 @@
 .boundary {
-  align-items: center;
   display: flex;
   justify-content: space-around;
 }
@@ -74,7 +73,8 @@
 .pitch {
   background-color: green;
   width: 2rem; 
-  height: 6rem; 
+  height: 8rem; 
+  margin-top: 1rem; 
 }
 
 .pitchBorders {
@@ -85,10 +85,9 @@
 }
 
 .revoSports {
-  border: 1px solid black; 
+  border: 1.5px solid black;
   cursor: pointer;
   margin: 3rem;   
-  padding: 3rem;
 }
 
 .rowStyle {
@@ -99,6 +98,7 @@
 .runUpNets {
   align-content: center;
   align-items: center;
+  background-color: #f2f2f2;
   border: 1px solid black; 
   display: flex;
   height: 13rem;
