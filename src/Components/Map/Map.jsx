@@ -9,10 +9,7 @@ import FloorBall from '../../assets/Floorball_pictogram.svg';
 class Map extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-      selectedArea: null
-    }
+    this.state = { selectedArea: null }
     this.handleClick=this.handleClick.bind(this);
   }
 
@@ -55,15 +52,15 @@ class Map extends Component {
               <div className='rowStyle'>
                 <div id='bowlingMachine_1' onClick={this.handleClick} className="bowlingMachine">
                   <img id='bowlingMachine_1' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div id='bowlingMachine_1' className="pitch"></div>
+                  <div id='bowlingMachine_1' className="pitch" />
                 </div>
                 <div id='bowlingMachine_2' onClick={this.handleClick} className="bowlingMachine">
                   <img id='bowlingMachine_2' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div id='bowlingMachine_2' className="pitch"></div>
+                  <div id='bowlingMachine_2' className="pitch" />
                 </div>
                 <div id='bowlingMachine_3' onClick={this.handleClick} className="bowlingMachine">
                   <img id='bowlingMachine_3' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div id='bowlingMachine_3' className="pitch"></div>
+                  <div id='bowlingMachine_3' className="pitch" />
                 </div>
               </div>
 
@@ -74,11 +71,11 @@ class Map extends Component {
                   <div id='CoachesBox_2' >
                     <img id='CoachesBox_2'  style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
                   </div>
-                  <div id='CoachesBox_2'  className="pitch"></div>
+                  <div id='CoachesBox_2'  className="pitch" />
               </div>
                 <div id='CoachesBox_3' onClick={this.handleClick} className="CoachesBox1">
                   <img id='CoachesBox_3' style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
-                  <div id='CoachesBox_3' className="pitch"></div>
+                  <div id='CoachesBox_3' className="pitch" />
                 </div>
               </div>
 
@@ -87,14 +84,14 @@ class Map extends Component {
                   <div id='floorBall_1'>
                     <img id='floorBall_1' style={{width:'5rem', height:'3rem'}} src={FloorBall} alt="" />
                   </div>
-                  <div id='floorBall_1' className="court"></div>
+                  <div id='floorBall_1' className="court" />
                 </div>
                 <div id='floorBall_2' onClick={this.handleClick} className='floorBall'> 
                   <div id='floorBall_2'>
                     <img id='floorBall_2' style={{width:'5rem', height:'3rem'}} src={FloorBall} alt="" />
                   </div>
                   <div id='floorBall_2'>
-                    <div id='floorBall_2' className="court"></div>
+                    <div id='floorBall_2' className="court" />
                   </div>
                 </div>
               </div>
