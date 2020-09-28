@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import './BookingForm.css';
 
@@ -17,76 +17,63 @@ class BookingForm extends Component {
 
   render() {
     return (
-      <div>
-        <Form>
-          <Form.Row>
-            <Form.Group as={Col} md={2}>
+      <div className="form">
+        <Form style={{ display: 'flex', flexDirection:'column', alignItems: 'center', marginTop: '1rem', justifyContent: 'space-around' }}>
+              <Form.Row>
               <Form.Control
+                className="field"
                 required
                 type="text"
                 placeholder="First Name"
                 name="firstName"
               />
-            </Form.Group>
-
-            <Form.Group as={Col} md={2}>
               <Form.Control
+                className="field"
                 required
                 type="text"
                 placeholder="Last Name"
                 name="lastName"
               />
-            </Form.Group>
-          </Form.Row>
+            </Form.Row>
 
           <Form.Row>
-          <Form.Group as={Col} md={2}>
             <Form.Control
+              className="field"
               required
               type="date"
               name="date"
             />
-          </Form.Group>
-
-          <Form.Group as={Col} md={2}>
             <Form.Control  
+              className="field"
               required
               placeholder="start"
               type="time"
               name="starttime"
             />
-          </Form.Group>
-          </Form.Row>
+            </Form.Row>
 
           <Form.Row>
-            <Form.Group as={Col} md={2}>
             <Form.Control
+              className="field"
               required
               name="phoneNumber"
               placeholder="Phone Number"
             />
-            </Form.Group>
-
-            <Form.Group as={Col} md={2}>
-            <Form.Control  
+            <Form.Control
+              className="field"  
               required
               placeholder="start"
               type="time"
               name="endtime"
             />
-          </Form.Group>
-          </Form.Row>
-
-          <Form.Row>
-            <Form.Group as={Col} md={2}>
+            </Form.Row>
               <Button 
-                variant="outline-primary light" 
+                style={{ marginTop: '1rem'}}
+                variant="primary" 
                 type="submit"
                 >
                 Submit
               </Button>
-            </Form.Group>
-          </Form.Row>
         </Form>
       </div >
     )

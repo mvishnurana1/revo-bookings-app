@@ -1,0 +1,10 @@
+.field {
+  width: 12rem; 
+  margin-top: 1rem; 
+  margin-left: 1rem; 
+}
+
+.form {
+  background-color: #777;
+  border: 1px solid black; 
+}
