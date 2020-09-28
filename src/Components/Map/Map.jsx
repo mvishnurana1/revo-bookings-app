@@ -10,7 +10,8 @@ class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedArea: ''
+
+      selectedArea: null
     }
     this.handleClick=this.handleClick.bind(this);
   }
