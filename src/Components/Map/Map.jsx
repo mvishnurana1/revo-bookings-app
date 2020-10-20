@@ -1,7 +1,8 @@
 import React, { Component } from 'react'; 
-import { Button } from 'react-bootstrap'; 
+import { Button, Container } from 'react-bootstrap'; 
 import Modal from 'react-bootstrap/Modal'; 
 
+import BookingForm  from '../BookingForm/BookingForm'; 
 import './Map.css';
 
 import BowlingMachine from '../../assets/bowling-machine.png'; 
@@ -29,6 +30,7 @@ class Map extends Component {
     if (selectedArea !== null) {
       return (
         <Modal
+          backdrop
           show={selectedArea}
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
@@ -40,12 +42,9 @@ class Map extends Component {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
-          <p>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-            consectetur ac, vestibulum at eros.
-          </p>
+          <Container>
+            <BookingForm />
+          </Container>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={() => this.setState({ selectedArea: null })}>Close</Button>
