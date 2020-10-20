@@ -1,13 +1,13 @@
 import React, { Component } from 'react'; 
-import Modal from 'react-bootstrap/Modal'; 
 import { Button } from 'react-bootstrap'; 
+import Modal from 'react-bootstrap/Modal'; 
 
 import './Map.css';
 
-import RunNets from '../../assets/run-up-nets.png';
-import CoachPng from '../../assets/coaches-box.png';  
 import BowlingMachine from '../../assets/bowling-machine.png'; 
+import CoachPng from '../../assets/coaches-box.png';  
 import FloorBall from '../../assets/Floorball_pictogram.svg'; 
+import RunNets from '../../assets/run-up-nets.png';
 
 class Map extends Component {
   constructor(props) {
