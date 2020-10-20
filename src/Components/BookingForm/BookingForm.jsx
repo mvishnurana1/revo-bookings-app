@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
-import Form from 'react-bootstrap/Form';
+import { Button, Form } from 'react-bootstrap';
+
 import './BookingForm.css';
 
 class BookingForm extends Component {
