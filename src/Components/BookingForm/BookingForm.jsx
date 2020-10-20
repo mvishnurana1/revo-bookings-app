@@ -18,7 +18,11 @@ class BookingForm extends Component {
   render() {
     return (
       <div className="form">
-        <Form style={{ display: 'flex', flexDirection:'column', alignItems: 'center', marginTop: '1rem', justifyContent: 'space-around' }}>
+        <Form style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              flexDirection: 'column', 
+        }}>
               <Form.Row>
               <Form.Control
                 className="field"
