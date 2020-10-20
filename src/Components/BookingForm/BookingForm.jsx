@@ -7,77 +7,99 @@ class BookingForm extends Component {
   constructor(props){
     super(props);
     this.state = {
+      bookingDate:'',
+      endTime: '', 
       firstName:'', 
       lastName:'', 
-      date:'', 
-      time:'', 
-      phoneNumber:''
+      phoneNumber:'', 
+      startTime:''
     }
+    this.handleChange = this.handleChange.bind(this); 
+    this.handleSubmit = this.handleSubmit.bind(this); 
+  }
+
+  handleChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    }); 
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
   }
 
   render() {
     return (
       <div className="form">
-        <Form style={{ 
-              display: 'flex', 
-              alignItems: 'center', 
-              flexDirection: 'column', 
-        }}>
+        <Form onSubmit={this.handleSubmit}>
               <Form.Row>
               <Form.Control
                 className="field"
+                name="firstName"
+                onChange={this.handleChange}
+                placeholder="First Name"
                 required
                 type="text"
-                placeholder="First Name"
-                name="firstName"
+                value={this.state.firstName}
               />
               <Form.Control
                 className="field"
+                name="lastName"
+                onChange={this.handleChange}
+                placeholder="Last Name"
                 required
                 type="text"
-                placeholder="Last Name"
-                name="lastName"
+                value={this.state.lastName}
               />
             </Form.Row>
 
           <Form.Row>
             <Form.Control
               className="field"
-              required
+              name="bookingDate"
+              onChange={this.handleChange}
               type="date"
-              name="date"
+              required
+              value={this.state.bookingDate}
             />
             <Form.Control  
               className="field"
-              required
-              placeholder="start"
+              name="startTime"
+              onChange={this.handleChange}
               type="time"
-              name="starttime"
+              required
+              value={this.state.startTime}
             />
             </Form.Row>
 
           <Form.Row>
             <Form.Control
               className="field"
-              required
               name="phoneNumber"
+              onChange={this.handleChange}
               placeholder="Phone Number"
+              value={this.state.phoneNumber}
+              required
             />
             <Form.Control
               className="field"  
-              required
-              placeholder="start"
               type="time"
-              name="endtime"
+              name="endTime"
+              onChange={this.handleChange}
+              value={this.state.endTime}
+              required
             />
             </Form.Row>
+            <div className='buttonContainer'>
               <Button 
                 style={{ marginTop: '1rem'}}
-                variant="primary" 
                 type="submit"
+                value="submit"
+                variant="primary" 
                 >
-                Submit
-              </Button>
+                  Submit
+                </Button>
+            </div>
         </Form>
       </div >
     )
