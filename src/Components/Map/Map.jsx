@@ -12,6 +12,8 @@ import RunNets from '../../assets/run-up-nets.png';
 
 const BOWLING_MACHINES = ['Bowling Machine 1', 'Bowling Machine 2', 'Bowling Machine 3']; 
 const COACHES_BOX = ['Coaches Box 2', 'Coaches Box 3']; 
+const RUN_UP_NETS = ['Run Up Net 1', 'Run Up Net 2', 'Run Up Net 3']; 
+const FOOT_BALL_COURTS = ['FloorBall 1', 'FloorBall 2']; 
 
 class Map extends Component {
   constructor(props) {
@@ -66,7 +68,7 @@ class Map extends Component {
             <div className='columnStyle'>
               <div className='bowlingMachineBox' id='coaches_box' onClick={(e) => this.handleClick(e)}> 
                 <div>
-                  <img  id='coaches_box'style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
+                  <img  id='coaches_box' className="centre" src={CoachPng} alt="" />
                 </div>
                 <div  id='coaches_box' className='triplePitch'>
                   <div id='coaches_box' className="pitch triplet" />
@@ -75,18 +77,12 @@ class Map extends Component {
                 </div>
               </div>
               <div style={{ display: 'flex' }}>
-                <div id='runUpNets_1' onClick={(e) => this.handleClick(e)} className='runUpNets'>
-                  <img id='runUpNets_1' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'2rem'}} alt="" />
-                  <div id='runUpNets_1' className="pitch" />
-                </div>
-                <div id='runUpNets_2' onClick={(e) => this.handleClick(e)} className='runUpNets'>
-                  <img id='runUpNets_2' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'2rem'}} alt="" />
-                  <div id='runUpNets_2' className="pitch" />
-                </div>
-                <div id='runUpNets_3' onClick={(e) => this.handleClick(e)} className='runUpNets'>
-                  <img id='runUpNets_3' className='pitchBorders' src={RunNets} style={{width:'3rem', height:'2rem'}} alt="" />
-                  <div id='runUpNets_3' className="pitch" />
-                </div>
+                {RUN_UP_NETS.map((id) => (
+                  <div className="runUpNets" id={id} key={id} onClick={(e) => this.handleClick(e)}>
+                  <img id={id} className='pitchBorders' src={RunNets} style={{width:'3rem', height:'2rem'}} alt="" />
+                  <div id={id} className="pitch" />
+                  </div>
+                ))}
               </div>
 
               <div className='rowStyle'>
@@ -105,7 +101,7 @@ class Map extends Component {
                 {
                   COACHES_BOX.map((id) => (
                     <div className="CoachesBox1" key={id} id={id} onClick={(e) => this.handleClick(e)}>
-                       <img id={id}  style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
+                       <img id={id} className="centre" src={CoachPng} alt="" />
                        <div id={id}  className="pitch" />
                     </div>
                   ))
@@ -113,20 +109,12 @@ class Map extends Component {
               </div>
 
               <div className='columnStyle'>
-                <div id='floorBall_1' onClick={(e) => this.handleClick(e)} className='floorBall'> 
-                  <div id='floorBall_1'>
-                    <img id='floorBall_1' style={{width:'5rem', height:'3rem'}} src={FloorBall} alt="" />
+                {FOOT_BALL_COURTS.map((id) => (
+                  <div className='floorBall' key={id} onClick={(e) => this.handleClick(e)}>
+                    <img id={id} style={{width:'5rem', height:'3rem'}} src={FloorBall} alt="" />
+                    <div id={id} className="court" />
                   </div>
-                  <div id='floorBall_1' className="court" />
-                </div>
-                <div id='floorBall_2' onClick={(e) => this.handleClick(e)} className='floorBall'> 
-                  <div id='floorBall_2'>
-                    <img id='floorBall_2' style={{width:'5rem', height:'3rem'}} src={FloorBall} alt="" />
-                  </div>
-                  <div id='floorBall_2'>
-                    <div id='floorBall_2' className="court" />
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
