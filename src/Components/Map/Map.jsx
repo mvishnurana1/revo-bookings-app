@@ -10,6 +10,8 @@ import CoachPng from '../../assets/coaches-box.png';
 import FloorBall from '../../assets/Floorball_pictogram.svg'; 
 import RunNets from '../../assets/run-up-nets.png';
 
+const BOWLING_MACHINES = ['bowling_machine_1', 'bowling_machine_2', 'bowling_machine_3']; 
+
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -30,14 +32,14 @@ class Map extends Component {
     if (selectedArea !== null) {
       return (
         <Modal
+          aria-labelledby="contained-modal-title-vcenter"
           backdrop
+          centered
           show={selectedArea}
           size="lg"
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
       >
         <Modal.Header>
-          <Modal.Title id="contained-modal-title-vcenter">
+          <Modal.Title className="area_title" id="contained-modal-title-vcenter">
             {selectedArea}
           </Modal.Title>
         </Modal.Header>
@@ -87,18 +89,13 @@ class Map extends Component {
               </div>
 
               <div className='rowStyle'>
-                <div id='bowlingMachine_1' onClick={(e) => this.handleClick(e)} className="bowlingMachine">
-                  <img id='bowlingMachine_1' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div id='bowlingMachine_1' className="pitch" />
-                </div>
-                <div id='bowlingMachine_2' onClick={(e) => this.handleClick(e)} className="bowlingMachine">
-                  <img id='bowlingMachine_2' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div id='bowlingMachine_2' className="pitch" />
-                </div>
-                <div id='bowlingMachine_3' onClick={(e) => this.handleClick(e)} className="bowlingMachine">
-                  <img id='bowlingMachine_3' className='bowlingMachineBorder' src={BowlingMachine} alt="" />
-                  <div id='bowlingMachine_3' className="pitch" />
-                </div>
+                {BOWLING_MACHINES.map((id) => (
+                  <div key={id} id={id} onClick={(e) => this.handleClick(e)} className="bowlingMachine">
+                    <img id={id} className='bowlingMachineBorder' src={BowlingMachine} alt="" />
+                    <div id= {id} className="pitch" />
+                  </div>
+                ))
+                }
               </div>
 
             </div>
