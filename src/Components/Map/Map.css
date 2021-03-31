@@ -29,6 +29,11 @@
   width: 3rem; 
 }
 
+.centre {
+  height: 3rem; 
+  width: 3rem; 
+}
+
 .columnStyle {
   display: flex;
   flex-direction: column;
