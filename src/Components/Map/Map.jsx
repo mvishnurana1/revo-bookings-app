@@ -10,7 +10,8 @@ import CoachPng from '../../assets/coaches-box.png';
 import FloorBall from '../../assets/Floorball_pictogram.svg'; 
 import RunNets from '../../assets/run-up-nets.png';
 
-const BOWLING_MACHINES = ['bowling_machine_1', 'bowling_machine_2', 'bowling_machine_3']; 
+const BOWLING_MACHINES = ['Bowling Machine 1', 'Bowling Machine 2', 'Bowling Machine 3']; 
+const COACHES_BOX = ['Coaches Box 2', 'Coaches Box 3']; 
 
 class Map extends Component {
   constructor(props) {
@@ -101,16 +102,14 @@ class Map extends Component {
             </div>
             <div className='columnStyle'>
               <div style={{ display: "flex" }}>
-                <div id='CoachesBox_2' onClick={(e) => this.handleClick(e)} className="CoachesBox1">
-                  <div id='CoachesBox_2' >
-                    <img id='CoachesBox_2'  style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
-                  </div>
-                  <div id='CoachesBox_2'  className="pitch" />
-              </div>
-                <div id='CoachesBox_3' onClick={(e) => this.handleClick(e)} className="CoachesBox1">
-                  <img id='CoachesBox_3' style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
-                  <div id='CoachesBox_3' className="pitch" />
-                </div>
+                {
+                  COACHES_BOX.map((id) => (
+                    <div className="CoachesBox1" key={id} id={id} onClick={(e) => this.handleClick(e)}>
+                       <img id={id}  style={{width:'3rem', height:'3rem'}} src={CoachPng} alt="" />
+                       <div id={id}  className="pitch" />
+                    </div>
+                  ))
+                }
               </div>
 
               <div className='columnStyle'>
