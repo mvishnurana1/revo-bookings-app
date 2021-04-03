@@ -5,10 +5,10 @@ import Modal from 'react-bootstrap/Modal';
 import BookingForm  from '../BookingForm/BookingForm'; 
 import './Map.css';
 
-import BowlingMachine from '../../assets/bowling-machine.png'; 
-import CoachPng from '../../assets/coaches-box.png';  
-import FloorBall from '../../assets/Floorball_pictogram.svg'; 
-import RunNets from '../../assets/run-up-nets.png';
+import BowlingMachine from '../../assets/Map/bowling-machine.png'; 
+import CoachPng from '../../assets/Map/coaches-box.png';  
+import FloorBall from '../../assets/Map/Floorball_pictogram.svg'; 
+import RunNets from '../../assets/Map/run-up-nets.png';
 
 const BOWLING_MACHINES = ['Bowling Machine 1', 'Bowling Machine 2', 'Bowling Machine 3']; 
 const COACHES_BOX = ['Coaches Box 2', 'Coaches Box 3']; 
@@ -98,14 +98,12 @@ class Map extends Component {
             </div>
             <div className='columnStyle'>
               <div style={{ display: "flex" }}>
-                {
-                  COACHES_BOX.map((id) => (
+                {COACHES_BOX.map((id) => (
                     <div className="CoachesBox1" key={id} id={id} onClick={(e) => this.handleClick(e)}>
                        <img id={id} className="centre" src={CoachPng} alt="" />
                        <div id={id}  className="pitch" />
                     </div>
-                  ))
-                }
+                  ))}
               </div>
 
               <div className='columnStyle'>
