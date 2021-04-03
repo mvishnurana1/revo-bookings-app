@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 4px 2px -2px grey;
+}
+
+.logo {
+    margin: 1rem 3rem; 
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
