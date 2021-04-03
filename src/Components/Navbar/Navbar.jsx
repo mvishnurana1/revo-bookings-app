@@ -1,25 +1,29 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome'; 
 
+import './Navbar.css'; 
+
 const Navbar = () => {
-    return <div style={{ display: 'flex' }}>
+    return <div className="navbar">
         <FontAwesome
-            className="home"
+            className="home logo"
             name="home"
             size="3x"
-            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
         />
         <FontAwesome
-            className="home"
-            name="home"
+            className="calendar logo"
+            name="calendar"
             size="3x"
-            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
         />
         <FontAwesome
-            className="home"
-            name="home"
+            className="flag logo"
+            name="flag"
             size="3x"
-            style={{ textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+        />
+        <FontAwesome
+            className="user-circle logo"
+            name="user-circle"
+            size="3x"
         />
     </div>
 }
