@@ -1,9 +1,12 @@
 import React from 'react';
 import FontAwesome from 'react-fontawesome'; 
+import { useLocation } from 'react-router-dom'; 
 
 import './Navbar.css'; 
 
-const Navbar = () => {
+const Navbar = (props) => {
+    let location = useLocation(); 
+
     return <div className="navbar" style={{ display: 'flex'}}> 
     <button className="button">
         <FontAwesome
@@ -19,6 +22,7 @@ const Navbar = () => {
                 className="home logo"
                 name="home"
                 size="3x"
+                style={location.pathname === '/'? { color: 'blue' }: null}
             />
         </button>
 
@@ -27,6 +31,7 @@ const Navbar = () => {
                 className="calendar logo"
                 name="calendar"
                 size="3x"
+                style={location.pathname === '/bookings'? { color: 'blue' }: null}
             />
         </button>
 
@@ -35,6 +40,7 @@ const Navbar = () => {
                 className="bell logo"
                 name="bell"
                 size="3x"
+                style={location.pathname === '/notifications'? { color: 'blue' }: null}
             />
         </button>
     </div>
@@ -44,7 +50,8 @@ const Navbar = () => {
             <FontAwesome
                 className="user-circle logo"
                 name="user-circle"
-               size="3x"
+                size="3x"
+                style={location.pathname === '/account'? { color: 'blue' }: null}
             />
      </div>
     </button>

@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Map from './Components/Map/Map';
-import Navbar from './Components/Navbar/Navbar';
+import Routes from './Components/Routes/Routes';
 
 function App() {
     return (
         <div>
-            <Navbar />
-            <Map />
+            <Routes />
         </div>
     );
 }
