@@ -6,7 +6,7 @@ import getWeekDay from '../../Global/Dayparser';
 import bookings from '../../Global/Static/bookings'; 
 
 const card = {
-    backgroundColor: 'rgb(250, 250, 250)', 
+    backgroundColor: 'rgb(240, 240, 240)', 
     display: 'flex', 
     height: '5rem',
     margin: '1rem', 
