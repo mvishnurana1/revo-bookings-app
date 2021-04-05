@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import './Navbar.css'; 
 
-const Navbar = (props) => {
+const Navbar = () => {
     let location = useLocation(); 
 
     return <div className="navbar" style={{ display: 'flex'}}> 
