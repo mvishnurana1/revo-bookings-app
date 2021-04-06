@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap'; 
 
 import './LandingPage.css'; 
@@ -11,6 +11,19 @@ const landingStyle = {
 }
 
 const LandingPage = () => {
+    const [validated, setValidated] = useState(false); 
+
+    const handleSubmit = (event) => {
+        const form = event.currentTarget; 
+        event.preventDefault();
+        if (form.checkValidity() === false) {
+             
+            event.stopPropagation(); 
+        }
+
+        setValidated(true); 
+    }
+
     return (
         <div style={landingStyle}>
             <div className='text'>
@@ -22,14 +35,22 @@ const LandingPage = () => {
                 </div>
             </div>
             <div className="form-card">
-                <Form>
-                    <Form.Group controlId="formGroupEmail">
-                        <Form.Control type="email" placeholder="Email address" />
+                <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                    <Form.Group hasValidation controlId="formGroupEmail">
+                        <Form.Control type="email" placeholder="Email address" required/>
+                        <Form.Control.Feedback type="invalid">
+                            Does n't look right!
+                        </Form.Control.Feedback>
+                        <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group controlId="formGroupPassword">
-                        <Form.Control type="password" placeholder="Password" />
+                        <Form.Control type="password" placeholder="Password" required />
+                        <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                        <Form.Control.Feedback type="invalid">
+                            Does n't look right!
+                        </Form.Control.Feedback>
                     </Form.Group>
-                    <Button block variant="primary">Log In</Button>
+                    <Button block type="submit" variant="primary">Log In</Button>
                     <hr/>
                     <div style={{display: 'flex', justifyContent: 'center'}} >
                         <Button size="lg" variant="danger">Create New Account</Button>
