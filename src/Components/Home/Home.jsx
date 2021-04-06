@@ -14,7 +14,7 @@ const card = {
     width: '30rem'
 }
 
-const Home = () => {
+const Home = () => { 
     return bookings.map((booking) => <div className='bookings' key={booking.id}>
         <div className='date'>
             <>

@@ -7,7 +7,7 @@ import './Navbar.css';
 const Navbar = () => {
     let location = useLocation(); 
 
-    return <div className="navbar" style={{ display: 'flex'}}> 
+    return <div className="navbar"> 
     <button className="button">
         <FontAwesome
             className="book logo"

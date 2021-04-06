@@ -25,3 +25,14 @@
 .logo {
     margin: 1rem 4rem; 
 }
+
+@media only screen and (max-width: 902px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .logo {
+        margin: 0.5rem 2rem; 
+        width: 10px; 
+    }
+}
