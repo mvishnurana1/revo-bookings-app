@@ -1,5 +1,8 @@
 .landingPage {
+    background-color: rgb(245, 245, 245);
     display: flex;
+    justify-content: center;
+    padding: 10rem 2rem; 
 }
 
 .subtitle {
@@ -25,4 +28,17 @@
     font-size: xx-large;
     color: rgb(200, 35, 51); 
     font-weight: 1000;
+}
+
+@media only screen and (max-width: 768px) {
+    .landingPage {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text {
+        margin-bottom: 1rem; 
+    }
 }
